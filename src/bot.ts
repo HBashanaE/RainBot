@@ -1,9 +1,9 @@
-const { Bot } = require("grammy");
+import { Bot } from "grammy";
 
 require('dotenv').config()
 
 // Create a bot object
-const bot = new Bot(process.env.TOKEN);
+const bot = new Bot(process.env.TOKEN || '');
 
 // Register listeners to handle messages
 bot.on("message:text", (ctx) => {
